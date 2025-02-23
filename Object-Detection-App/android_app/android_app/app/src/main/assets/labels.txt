@@ -1,0 +1,2 @@
+0: pistol
+1: knife
