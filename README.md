@@ -1,7 +1,15 @@
-# Real-Time Object Detection using YOLOv10
+# Real-Time Object Detection with YOLO and Android Integration
 
 ## Overview
-This project implements a real-time object detection system using YOLOv10. Designed as part of the IE Deep Learning initiative, the system processes video streams and images to detect objects with high accuracy and speed.
+This project implements a complete solution for real-time object detection. It includes:
+- A deep learning component using YOLO for training, validation, and TF Lite export.
+- An Android application that integrates the exported TF Lite model for on-device inference.
+
+## Deep Learning Model Training & TF Lite Export
+- Train your custom YOLO model using the provided notebooks.
+- Export the trained model to TensorFlow Lite format.
+- Review the `train_export_yolov8_model.ipynb` and `Deep_Learning_Project.ipynb` notebooks for detailed instructions.
+- Use the exported `.tflite` model along with its labels in the Android app.
 
 ## Features
 - Real-time object detection on live video feeds.
@@ -10,38 +18,24 @@ This project implements a real-time object detection system using YOLOv10. Desig
 - Optimized for performance and scalability.
 
 ## Prerequisites
-- Python 3.7 or higher
-- OpenCV
-- TensorFlow/PyTorch (depending on your implementation)
-- Other dependencies as listed in `requirements.txt`
+- Python 3.7+ with necessary libraries (e.g., OpenCV, ultralytics)
+- TensorFlow Lite and related dependencies for model export
+- Android Studio for building and deploying the Android application
 
-## Installation
+## Installation & Usage
 1. Clone the repository:
    ```
    git clone https://github.com/yourusername/object_detection_realtime.git
    ```
-2. Change to the project directory:
-   ```
-   cd object_detection_realtime
-   ```
-3. Install the required packages:
-   ```
-   pip install -r requirements.txt
-   ```
-
-## Usage
-1. Prepare your video/image source.
-2. Run the detection script:
-   ```
-   python detect.py --source path/to/your/input
-   ```
-3. Adjust detection parameters in the configuration files for optimal performance.
-
-## Configuration
-- Configure detection thresholds, model paths, and other settings in the `config.yaml` file.
+2. For deep learning tasks:
+   - Open and run the provided notebooks to train and export your model.
+3. For Android deployment:
+   - Place the exported TF Lite model and labels in the specified assets folder.
+   - Open the Android project in Android Studio.
+   - Build and run the project on your Android device.
 
 ## Contributing
-Contributions are welcome. Please open issues or pull requests for improvements and bug fixes.
+Contributions are welcome. Please open issues or submit pull requests for improvements and bug fixes.
 
 ## License
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
